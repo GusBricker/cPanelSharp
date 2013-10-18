@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cPanelDDNS", "cPanelDDNS\cPanelDDNS.csproj", "{0EBF46E9-3A63-41EB-93C7-6D54EBCB5531}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cPanelAPILib", "cPanelAPI\cPanelAPILib.csproj", "{99167CBA-4D81-41C7-8BA1-7CD09F62B73C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{ABE00D77-7A51-4C89-8340-D6D998C37125}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EBF46E9-3A63-41EB-93C7-6D54EBCB5531}.Debug|x86.ActiveCfg = Debug|x86
+		{0EBF46E9-3A63-41EB-93C7-6D54EBCB5531}.Debug|x86.Build.0 = Debug|x86
+		{0EBF46E9-3A63-41EB-93C7-6D54EBCB5531}.Release|x86.ActiveCfg = Release|x86
+		{0EBF46E9-3A63-41EB-93C7-6D54EBCB5531}.Release|x86.Build.0 = Release|x86
+		{99167CBA-4D81-41C7-8BA1-7CD09F62B73C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{99167CBA-4D81-41C7-8BA1-7CD09F62B73C}.Debug|x86.Build.0 = Debug|Any CPU
+		{99167CBA-4D81-41C7-8BA1-7CD09F62B73C}.Release|x86.ActiveCfg = Release|Any CPU
+		{99167CBA-4D81-41C7-8BA1-7CD09F62B73C}.Release|x86.Build.0 = Release|Any CPU
+		{ABE00D77-7A51-4C89-8340-D6D998C37125}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ABE00D77-7A51-4C89-8340-D6D998C37125}.Debug|x86.Build.0 = Debug|Any CPU
+		{ABE00D77-7A51-4C89-8340-D6D998C37125}.Release|x86.ActiveCfg = Release|Any CPU
+		{ABE00D77-7A51-4C89-8340-D6D998C37125}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = cPanelDDNS\cPanelDDNS.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.TextStylePolicy = $2
+		$2.FileWidth = 120
+		$2.TabsToSpaces = False
+		$2.inheritsSet = VisualStudio
+		$2.inheritsScope = text/plain
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.AnonymousMethodBraceStyle = NextLine
+		$3.PropertyBraceStyle = NextLine
+		$3.PropertyGetBraceStyle = NextLine
+		$3.PropertySetBraceStyle = NextLine
+		$3.EventBraceStyle = NextLine
+		$3.EventAddBraceStyle = NextLine
+		$3.EventRemoveBraceStyle = NextLine
+		$3.StatementBraceStyle = NextLine
+		$3.ElseNewLinePlacement = NewLine
+		$3.ElseIfNewLinePlacement = SameLine
+		$3.CatchNewLinePlacement = NewLine
+		$3.FinallyNewLinePlacement = NewLine
+		$3.AfterDelegateDeclarationParameterComma = True
+		$3.MethodCallArgumentWrapping = WrapIfTooLong
+		$3.MethodDeclarationParameterWrapping = WrapIfTooLong
+		$3.IndexerDeclarationParameterWrapping = WrapIfTooLong
+		$3.IndexerArgumentWrapping = WrapIfTooLong
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/x-csharp
+		$3.scope = text/x-csharp
+		$0.TextStylePolicy = $4
+		$4.FileWidth = 120
+		$4.TabsToSpaces = False
+		$4.inheritsSet = VisualStudio
+		$4.inheritsScope = text/plain
+		$4.scope = text/plain
+		$0.VersionControlPolicy = $5
+		$5.inheritsSet = Mono
+		$0.ChangeLogPolicy = $6
+		$6.UpdateMode = None
+		$6.MessageStyle = $7
+		$7.LineAlign = 0
+		$6.inheritsSet = Mono
+	EndGlobalSection
+EndGlobal

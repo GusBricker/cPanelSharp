@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99167CBA-4D81-41C7-8BA1-7CD09F62B73C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>cPanelAPILib</RootNamespace>
+    <AssemblyName>cPanelAPI</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Records\cPanelResult.cs" />
+    <Compile Include="Records\EventResult.cs" />
+    <Compile Include="Records\ZoneRecord.cs" />
+    <Compile Include="Records\DataRecordBase.cs" />
+    <Compile Include="Records\FetchZoneResponse.cs" />
+    <Compile Include="Records\EditZoneResponse.cs" />
+    <Compile Include="Modules\cPanelZoneEdit.cs" />
+    <Compile Include="Modules\cPanelModuleBase.cs" />
+    <Compile Include="ParameterPair.cs" />
+    <Compile Include="cPanelAPI.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Modules\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{ABE00D77-7A51-4C89-8340-D6D998C37125}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+# OS Files
+.DS_Store
+
+# Outputs
+bin/
+*.mdb
+
+# User preferences
+*.userprefs
+
