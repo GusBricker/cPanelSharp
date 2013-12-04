@@ -57,6 +57,7 @@ namespace cPanelAPILib
 
 			try
 			{
+				ServicePointManager.ServerCertificateValidationCallback = new System.Net.Security.RemoteCertificateValidationCallback(AcceptAllCertifications);
 				WebRequest request = WebRequest.Create (apiCall);
 				request.Credentials = cc;
 				request.Timeout = 8000;
@@ -131,6 +132,11 @@ namespace cPanelAPILib
 			}
 
 			return sb.ToString ();
+		}
+
+		public bool AcceptAllCertifications(object sender, System.Security.Cryptography.X509Certificates.X509Certificate certification, System.Security.Cryptography.X509Certificates.X509Chain chain, System.Net.Security.SslPolicyErrors sslPolicyErrors)
+		{
+			return true;
 		}
 	}
 }
