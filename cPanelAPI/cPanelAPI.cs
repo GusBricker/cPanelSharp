@@ -55,25 +55,32 @@ namespace cPanelAPILib
 			Logger.Instance.Write (Logger.Severity.Debug, apiCall);
 
 
-			WebRequest request = WebRequest.Create (apiCall);
-			request.Credentials = cc;
-			request.Timeout = 8000;
-			request.PreAuthenticate = true;
-
-			HttpWebResponse webResp = (HttpWebResponse)request.GetResponse();
-			Logger.Instance.Write (Logger.Severity.Debug,
-			                       "Response from cPanel request: ");
-			Logger.Instance.Write (Logger.Severity.Debug, 
-			                       webResp.StatusDescription);
-			if (webResp.StatusDescription == "OK")
+			try
 			{
-				StreamReader reader = new StreamReader (webResp.GetResponseStream (), Encoding.UTF8);
-				response = reader.ReadToEnd ();
+				WebRequest request = WebRequest.Create (apiCall);
+				request.Credentials = cc;
+				request.Timeout = 8000;
+				request.PreAuthenticate = true;
 
-				Logger.Instance.Write (Logger.Severity.Debug, response);
+				HttpWebResponse webResp = (HttpWebResponse)request.GetResponse();
+				Logger.Instance.Write (Logger.Severity.Debug,
+				                       "Response from cPanel request: ");
+				Logger.Instance.Write (Logger.Severity.Debug, 
+				                       webResp.StatusDescription);
+				if (webResp.StatusDescription == "OK")
+				{
+					StreamReader reader = new StreamReader (webResp.GetResponseStream (), Encoding.UTF8);
+					response = reader.ReadToEnd ();
 
-				return true;
+					Logger.Instance.Write (Logger.Severity.Debug, response);
+
+					return true;
+				}
+			} catch (Exception e)
+			{
+				Logger.Instance.Write (Logger.Severity.Error, "Web Request failed, with: " + e.Message);
 			}
+
 			return false;
 		}
 
