@@ -4,7 +4,7 @@ using CommandLine.Text;
 using System.Security;
 using System.Text;
 
-namespace cPanelAPILib
+namespace cPanelDDNS
 {
 	public class CmdOptions
 	{
