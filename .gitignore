@@ -1,10 +1,19 @@
-# OS Files
+#Specific Files
 .DS_Store
 
-# Outputs
-bin/
-*.mdb
+#Specifically generated file
+*/bin/*/*.dll
+*/bin/*/*.dll.mdb
+libs/*.dll.mdb
 
-# User preferences
+#Intermediate/Generated files
+*/obj/
+*.pdb
+*.xml
+
+#Userprefs
 *.userprefs
 
+#Any .exe
+*.exe
+*.exe.*
